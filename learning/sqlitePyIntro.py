@@ -32,5 +32,12 @@ rows = cursor.fetchall()
 for row in rows:
     print(row)
 
+import pandas as pd
+
+dataFrame = pd.read_sql("SELECT * FROM users", conn)
+print("\n-----Scores as DataFrame----")
+print(dataFrame)
+
+
 # Step 5: Close the Connection
 conn.close()
